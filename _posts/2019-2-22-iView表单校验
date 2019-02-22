@@ -1,0 +1,13 @@
+---
+layout:     post   				    # 使用的布局（不需要改）
+title:      iView表单校验 				# 标题 
+subtitle:   iView表单的校验文档中没有详述，踩了一下坑 #副标题
+date:       2019-2-22 				# 时间
+author:     XMT 						# 作者
+header-img: img/post-bg-2015.jpg 	#这篇文章标题背景图片
+catalog: true 						# 是否归档
+tags:								#标签
+    - Vue-cli
+    - iView
+---
+
