@@ -62,3 +62,4 @@ loader让webpack处理非JS文件，因为webpack自身只理解JavaScript。loa
 1. npm install jquery
 2. npm install expose-loader
 3. 在index.js中
+4
