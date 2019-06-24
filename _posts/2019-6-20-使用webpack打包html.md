@@ -142,3 +142,23 @@ new CopyPlugin([
 ### css中使用的图片打包路径
 因为在css文件中使用图片通常是通过（../img）的方式访问，而webpack打包时outputPath是.static/，是将所需的资源文件放build下的static文件下，并且css和图片路径前的../都会变成./static,所以图片的路径就会变成static/css/static/img，因此要设置publicPath属性为../，图片路径即恢复../img，就可以正常访问到static文件夹中的文件。
 可能你会觉得是不是很多此一举，加上了static又给要去掉，但是如果一开始设置outputPath为../会导致资源文件放置的路径不对，就不在build下了。
+具体是在webpack.config.js中
+```javascript
+module: {
+	rules: [
+	...
+	{
+		test: /\.(jpg|png|jpeg|gif|svg)$/,
+		use: [{
+			loader: 'url-loader',
+			options: {
+				limit: 8192, // 小于8KB转为base64 Data
+				name: 'imgs/[name].[hash:8].[ext]',
+				outputPath:'./static',
+				publicPath:'../'
+			}
+		}]
+	}
+	]
+}
+```
