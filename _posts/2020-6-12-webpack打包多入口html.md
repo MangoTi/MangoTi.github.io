@@ -142,18 +142,18 @@ module.exports = {
   	},
   	plugins: [
     	new HTMLWebpackPlugin({
-      	filename: "index.html",
-      	template: path.resolve(__dirname, './index.html'), // 生成html模板，有几个入口就要写几个，会将打包后的js、css等引入
-      	chunks: ['index'],// 页面对应的入口js
+      		filename: "index.html",
+      		template: path.resolve(__dirname, './index.html'), // 生成html模板，有几个入口就要写几个，会将打包后的js、css等引入
+      		chunks: ['index'],// 页面对应的入口js
     	}),
     	new HTMLWebpackPlugin({
-      	filename: "activity.html",
-      	template: path.resolve(__dirname, './activity.html'),
-      	chunks: ['activity'],
+      		filename: "activity.html",
+      		template: path.resolve(__dirname, './activity.html'),
+      		chunks: ['activity'],
     	}),
     	new MiniCssExtractPlugin({
-      	filename: './css/[name].[contenthash:8].css',
-      	chunkFilename: './css/[name].[contenthash:8].chunk.css'
+      		filename: './css/[name].[contenthash:8].css',
+      		chunkFilename: './css/[name].[contenthash:8].chunk.css'
     	}),
     	new CopyPlugin([
       	{ from: __dirname+'/src/js/rem.js', to: __dirname+'/dist/js' }, // 复制文件夹或页面到打包后的文件夹中
@@ -161,12 +161,12 @@ module.exports = {
     	]),
     	new vConsolePlugin({
       	filter: [],  // 需要过滤的入口文件
-      	enable: openVconsole // 根据环境控制是否使用vconsole
+      		enable: openVconsole // 根据环境控制是否使用vconsole
     	}),
     	new CleanWebpackPlugin(),
     	new webpack.DefinePlugin({
-      	'HOST': JSON.stringify(process.env.HOST),// 添加环境变量
-      	'HOSTPATH': JSON.stringify(hostPath),// 接口域名地址
+      		'HOST': JSON.stringify(process.env.HOST),// 添加环境变量
+      		'HOSTPATH': JSON.stringify(hostPath),// 接口域名地址
     	})
 	],
 	devServer: {
