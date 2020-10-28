@@ -1,1 +1,31 @@
 
+# serverless了解及初步实践
+## 一、概念
+- serveless是指构建和运行不需要服务器管理的应用程序，从技术角度就是FaaS + BaaS。
+- FaaS（Function as a Service函数即服务），通常指将一个无状态的应用代码上传到云端，调用及执行。
+- BaaS（Backend as a Service后端即服务），比如云数据库、对象存储、消息队列，这些有状态的服务。
+- ”即服务“指的是不以“服务器”的方式来提供服务。
+- Serverless 则可以理解为运行在 FaaS 中的，使用了 BaaS 的函数。
+- 前端通过函数实现服务端逻辑，后端更靠后。
+
+![组成](https://github.com/MangoTi/MangoTi.github.io/blob/master/img/serverless1.png "组成")
+
+## 二、优势
+- 开发不需要了解服务器部署和配置，只需要编写函数，可快速迭代，部署函数。
+- 平台根据请求自动平行调整服务资源，拥有近乎无限的扩容能力，按需收费，资源空闲不收费。
+
+## 三、运用场景
+1. 基于 Serverless 的 BFF（Backends For Frontends 其实就是对接口/服务进行管理封装）
+![BFF](https://github.com/MangoTi/MangoTi.github.io/blob/master/img/serverless2.png "BFF")
+2. 基于 Serverless 的服务端渲染，将路由拆分成函数，部署到FaaS
+3. 基于 Serverless 的小程序开发（全栈），例如支付就直接提供了很多SDK直接请求BaaS，ctx.mpserverless.db等
+
+## 四、小实践
+
+
+## 参看文献
+- [Serverless 掀起新的前端技术变革](https://zhuanlan.zhihu.com/p/65914436 "Serverless 掀起新的前端技术变革")
+- [Serverless For Frontend 前世今生](https://zhuanlan.zhihu.com/p/77095720 "Serverless For Frontend 前世今生")
+- [权威指南：Serverless 未来十年发展解读 — 伯克利分校实验室分享](https://serverlesscloud.cn/blog/2020-09-24-slsdays-johann-1/ "权威指南：Serverless 未来十年发展解读 — 伯克利分校实验室分享")
+- [Serverless + Egg.js 后台管理系统实战](https://serverlesscloud.cn/best-practice/2020-02-07-serverless-admin-system "Serverless + Egg.js 后台管理系统实战")
+- [Serverless + Egg.js + 对象存储 COS 构建图片上传应用](https://serverlesscloud.cn/blog/2020-03-31-serverless-egg "Serverless + Egg.js + 对象存储 COS 构建图片上传应用")
