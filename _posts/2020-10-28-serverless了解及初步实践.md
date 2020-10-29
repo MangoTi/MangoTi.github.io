@@ -7,7 +7,7 @@
 - Serverless 则可以理解为运行在 FaaS 中的，使用了 BaaS 的函数。
 - 前端通过函数实现服务端逻辑，后端更靠后。
 
-[![](https://github.com/MangoTi/MangoTi.github.io/blob/master/img/serverless3.png)](结果展示)
+[![](https://github.com/MangoTi/MangoTi.github.io/blob/master/img/serverless1.png)](结果展示)
 
 ## 二、优势
 - 开发不需要了解服务器部署和配置，只需要编写函数，可快速迭代，部署函数。
