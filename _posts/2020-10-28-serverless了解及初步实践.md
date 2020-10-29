@@ -7,7 +7,7 @@
 - Serverless 则可以理解为运行在 FaaS 中的，使用了 BaaS 的函数。
 - 前端通过函数实现服务端逻辑，后端更靠后。
 
-![组成](https://github.com/MangoTi/MangoTi.github.io/raw/master/img/serverless1.png "组成")
+[![](https://github.com/MangoTi/MangoTi.github.io/blob/master/img/serverless1.png)](组成)
 
 ## 二、优势
 - 开发不需要了解服务器部署和配置，只需要编写函数，可快速迭代，部署函数。
@@ -15,7 +15,7 @@
 
 ## 三、运用场景
 - 基于 Serverless 的 BFF（Backends For Frontends 其实就是对接口/服务进行管理封装）
-![BFF](https://github.com/MangoTi/MangoTi.github.io/raw/master/img/serverless2.png "BFF")
+[![](https://github.com/MangoTi/MangoTi.github.io/blob/master/img/serverless2.png)](BFF)
 - 基于 Serverless 的服务端渲染，将路由拆分成函数，部署到FaaS
 - 基于 Serverless 的小程序开发（全栈），例如支付就直接提供了很多SDK直接请求BaaS，ctx.mpserverless.db等
 
